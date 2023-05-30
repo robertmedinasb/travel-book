@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 interface UseLoginFormState {
   form: UseFormReturn<LoginForm>;
   handleSubmit: () => void;
+  firstError: string;
 }
 
 export const useLoginForm = (): UseLoginFormState => {
@@ -16,8 +17,10 @@ export const useLoginForm = (): UseLoginFormState => {
   });
 
   const handleSubmit = form.handleSubmit(async (data) => {
-    router.push('/sign-up');
+    router.push('/tours');
   });
 
-  return { form, handleSubmit };
+  const firstError = Object.values(form.formState.errors)[0]?.message ?? '';
+
+  return { form, handleSubmit, firstError };
 };

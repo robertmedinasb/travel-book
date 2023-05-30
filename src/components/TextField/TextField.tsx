@@ -2,47 +2,46 @@
 
 import { FC } from 'react';
 import textFieldStyles from './styles/TextField.module.scss';
-import { UseFormReturn } from 'react-hook-form';
-import { LoginForm } from '../LogInForm/types/LoginForm';
+import { FieldValues, UseFormReturn } from 'react-hook-form';
 
-interface TextFieldProps {
+interface TextFieldProps<Form extends FieldValues> {
   placeholder: string;
   title: string;
-  form: UseFormReturn<LoginForm>;
-  fieldName: keyof LoginForm;
+  form: UseFormReturn<Form>;
+  fieldName: keyof Form;
   type?: 'text' | 'password';
   regex?: RegExp;
   required?: boolean;
 }
 
-export const TextField: FC<TextFieldProps> = ({
+export function TextField<Form extends FieldValues>({
   form,
   title,
   fieldName,
   required,
   type = 'text',
   regex = /\w*/,
-}) => {
+}: TextFieldProps<Form>) {
   const {
     formState: { errors },
   } = form;
 
   return (
     <div className="flex flex-col gap-1 w-full">
-      <label className="font-semibold text-sm" htmlFor={fieldName}>
+      <label className="font-semibold text-sm" htmlFor={fieldName as string}>
         {title}
       </label>
       <input
         className={`${errors[fieldName]?.ref ? textFieldStyles.error : ''} ${
           textFieldStyles.textField
         }`}
-        id={fieldName}
+        id={fieldName as string}
         type={type}
-        {...form.register(fieldName, {
+        {...form.register(fieldName as any, {
           required,
           pattern: regex,
         })}
       />
     </div>
   );
-};
+}
