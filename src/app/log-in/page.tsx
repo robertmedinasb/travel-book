@@ -4,8 +4,8 @@ import { FormViewLayout } from '../layouts/FormView/FormView';
 export default function LogIn() {
   return (
     <FormViewLayout
-      title="¿Listo para seguir descubriendo el mundo juntos?"
-      description="Sé parte de la comunidad de viajeros más grande de Latinoamérica."
+      title="Are you ready for your next adventure?"
+      description="Be part of the biggest travellers community in LATAM"
     >
       <LogInForm />
     </FormViewLayout>
