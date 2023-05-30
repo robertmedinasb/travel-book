@@ -20,6 +20,7 @@ export const LogInForm = () => {
         fieldName={'password'}
         placeholder="type your password here"
         title="Password"
+        type="password"
       />
       <button type="submit" className={loginFormStyles.submitButton}>
         Submit

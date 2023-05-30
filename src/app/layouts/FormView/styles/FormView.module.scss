@@ -1,0 +1,31 @@
+@import '@/styles/colors.module.scss';
+
+.container {
+  background-color: $secondary-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 5rem;
+  @media (max-width: 640px){
+    flex-direction: column;
+  }
+}
+
+.title {
+  color: $white;
+  font-size: 34px;
+  max-width: 400px;
+  line-height: 100%;
+  margin: 0 auto;
+}
+
+.description {
+  color: $white;
+  font-size: 24px;
+  max-width: 400px;
+  line-height: 100%;
+  margin: 0 auto;
+}

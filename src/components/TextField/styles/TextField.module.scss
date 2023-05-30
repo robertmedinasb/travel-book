@@ -1,6 +1,8 @@
+@import '@/styles/colors.module.scss';
+
 .textField {
   padding: 10px 8px;
-  border: 1px solid #000000;
+  border: 1px solid $rich-black;
   border-radius: 8px;
   width: 100%;
 }
