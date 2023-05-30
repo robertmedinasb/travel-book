@@ -9,9 +9,15 @@ export const LogInForm = () => {
 
   return (
     <form className={loginFormStyles.form} onSubmit={handleSubmit}>
-      <TextField id="email" placeholder="example@email.com" title="Email" />
       <TextField
-        id="password"
+        form={form}
+        fieldName="email"
+        placeholder="example@email.com"
+        title="Email"
+      />
+      <TextField
+        form={form}
+        fieldName={'password'}
         placeholder="type your password here"
         title="Password"
       />

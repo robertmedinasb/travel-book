@@ -1,10 +1,5 @@
-import { useState } from 'react';
 import { UseFormReturn, useForm } from 'react-hook-form';
-
-interface LoginForm {
-  email: string;
-  password: string;
-}
+import { LoginForm } from '../types/LoginForm';
 
 interface UseLoginFormState {
   form: UseFormReturn<LoginForm>;
