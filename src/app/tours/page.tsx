@@ -1,5 +1,13 @@
-import { ToursList } from '@/components/ToursList/ToursList';
+import { TourHeader } from '@/components/Tours/Header/TourHeader';
+import { ToursList } from '@/components/Tours/List/ToursList';
+import { TourForm } from '@/components/Tours/TourForm/TourForm';
 
 export default function Tours() {
-  return <ToursList />;
+  return (
+    <main>
+      <TourHeader />
+      <TourForm />
+      <ToursList />
+    </main>
+  );
 }

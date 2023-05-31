@@ -1,0 +1,14 @@
+@import '@/styles/colors.module.scss';
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: -40px;
+  width: fit-content;
+  background: $white;
+  position: absolute;
+  height: 80px;
+}
