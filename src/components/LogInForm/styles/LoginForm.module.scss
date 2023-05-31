@@ -35,3 +35,8 @@
     text-decoration: underline;
   }
 }
+
+.errorMessage {
+  color: $error;
+  align-self: flex-start;
+}

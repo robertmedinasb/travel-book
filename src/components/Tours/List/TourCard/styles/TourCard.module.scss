@@ -11,9 +11,11 @@
   background: $white;
   border-radius: 10px;
   position: relative;
+  height: 180px;
 }
 
 .cardImage {
+  display: flex;
   width: 40%;
 }
 
@@ -42,10 +44,10 @@
   color: $primary-color;
   border-radius: 50%;
   width: fit-content;
-  position: absolute;
   bottom: 20px;
   right: 20px;
   width: 120px;
+  align-self: flex-end;
 }
 
 .duration {

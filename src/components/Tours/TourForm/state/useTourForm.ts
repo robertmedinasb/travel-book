@@ -12,37 +12,6 @@ interface TourFormStateProps {
   setTours: (tours: Tour[]) => void;
 }
 
-const TOURS: Tour[] = [
-  {
-    description: 'The best tour in the world ever ever ever ever ever ever',
-    duration: '1 day',
-    id: 1,
-    name: 'The best tour',
-    price: 100,
-  },
-  {
-    description: 'The best tour in the world ever ever ever ever ever ever',
-    duration: '1 day',
-    id: 1,
-    name: 'The best tour',
-    price: 100,
-  },
-  {
-    description: 'The best tour in the world ever ever ever ever ever ever',
-    duration: '1 day',
-    id: 1,
-    name: 'The best tour',
-    price: 100,
-  },
-  {
-    description: 'The best tour in the world ever ever ever ever ever ever',
-    duration: '1 day',
-    id: 1,
-    name: 'The best tour',
-    price: 100,
-  },
-];
-
 export const useTourForm = ({
   setPeopleCount,
   setTours,

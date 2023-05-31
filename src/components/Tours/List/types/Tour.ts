@@ -4,4 +4,5 @@ export interface Tour {
   description: string;
   price: number;
   duration: string;
+  image: string;
 }

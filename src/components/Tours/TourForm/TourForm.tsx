@@ -24,7 +24,6 @@ export const TourForm: FC<TourForm> = ({ setPeopleCount, setTours }) => {
             placeholder="Tour name"
             title="Tour name"
             width="200px"
-            required
           />
           <TextField
             form={form}
