@@ -10,25 +10,32 @@ interface TextFieldProps {
   regex?: RegExp;
   required?: boolean;
   fieldName: keyof ITourForm;
+  title: string;
+  width?: string;
 }
 
 export const TextField: FC<TextFieldProps> = ({
   fieldName,
   form,
-  placeholder,
   required,
   regex,
+  title,
+  width,
 }) => {
   const {
     formState: { errors },
   } = form;
 
   return (
-    <div className="flex flex-col gap-1 w-full">
+    <div className="flex flex-col gap-1">
+      <label htmlFor={fieldName} className={textFieldStyles.title}>
+        {title}
+      </label>
       <input
         className={`${errors[fieldName]?.ref ? textFieldStyles.error : ''} ${
           textFieldStyles.textField
         }`}
+        style={{ width }}
         id={fieldName as string}
         type={'text'}
         {...form.register(fieldName as any, {

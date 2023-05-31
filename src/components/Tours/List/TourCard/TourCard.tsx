@@ -4,7 +4,11 @@ import TourCardStyles from './styles/TourCard.module.scss';
 import Image from 'next/image';
 import tourImg from '@/assets/images/download.jpeg';
 
-export const TourCard: FC<Tour> = (tour) => {
+interface TourCardProps extends Tour {
+  peopleCount: number;
+}
+
+export const TourCard: FC<TourCardProps> = ({ peopleCount, ...tour }) => {
   return (
     <div className={TourCardStyles.card}>
       <div className={TourCardStyles.cardImage}>
@@ -14,6 +18,7 @@ export const TourCard: FC<Tour> = (tour) => {
         <span className={TourCardStyles.name}>{tour.name}</span>
         <span className={TourCardStyles.description}>{tour.description}</span>
       </div>
+      <div className={TourCardStyles.price}>S/. {tour.price * peopleCount}</div>
     </div>
   );
 };

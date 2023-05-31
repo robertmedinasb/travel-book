@@ -3,5 +3,5 @@ export interface ITourForm {
   startDate: string;
   endDate: string;
   adult: number;
-  child: number;
+  children: number;
 }

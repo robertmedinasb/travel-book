@@ -20,4 +20,5 @@
   margin: 0;
   padding: 0; 
   background: #AEC3B0;
+  box-sizing: border-box;
 }
