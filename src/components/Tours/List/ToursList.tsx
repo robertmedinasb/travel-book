@@ -38,7 +38,7 @@ const TOURS: Tour[] = [
 
 export const ToursList = () => {
   return (
-    <div className="flex flex-col p-5 gap-4 w-fit">
+    <div className="flex flex-col p-5 gap-4 w-fit mt-[8vh]">
       {TOURS.map((tour) => (
         <TourCard {...tour} />
       ))}

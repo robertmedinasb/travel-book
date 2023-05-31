@@ -1,0 +1,12 @@
+@import '@/styles/colors.module.scss';
+
+.textField {
+  padding: 10px 8px;
+  border: 1px solid $midnight-green;
+  width: 100%;
+}
+
+.error {
+  border-color: $error;
+}
+

@@ -6,9 +6,22 @@
   justify-content: center;
   padding: 20px;
   margin: 0 auto;
-  margin-top: -40px;
+  margin-top: -8vh;
   width: fit-content;
   background: $white;
   position: absolute;
-  height: 80px;
+  border-radius: 15px;
+  gap: 3rem;
+}
+
+.form {
+  display: flex;
+}
+
+.submitButton {
+  padding: 10px 12px;
+  background-color: $primary-color;
+  color: $white;
+  border: 1px solid $midnight-green;
+  height: 100%;
 }
