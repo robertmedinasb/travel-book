@@ -60,7 +60,7 @@ export const TourForm: FC<TourForm> = ({ setPeopleCount, setTours }) => {
           />
           <div>
             <button type="submit" className={TourFormStyles.submitButton}>
-              GO
+              Search
             </button>
           </div>
         </form>

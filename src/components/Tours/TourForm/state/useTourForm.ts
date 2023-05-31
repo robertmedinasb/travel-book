@@ -15,7 +15,7 @@ interface TourFormStateProps {
 const TOURS: Tour[] = [
   {
     activities: [],
-    description: 'The best tour in the world',
+    description: 'The best tour in the world ever ever ever ever ever ever',
     duration: '1 day',
     id: 1,
     name: 'The best tour',
@@ -23,7 +23,7 @@ const TOURS: Tour[] = [
   },
   {
     activities: [],
-    description: 'The best tour in the world',
+    description: 'The best tour in the world ever ever ever ever ever ever',
     duration: '1 day',
     id: 1,
     name: 'The best tour',
@@ -31,7 +31,7 @@ const TOURS: Tour[] = [
   },
   {
     activities: [],
-    description: 'The best tour in the world',
+    description: 'The best tour in the world ever ever ever ever ever ever',
     duration: '1 day',
     id: 1,
     name: 'The best tour',
@@ -39,7 +39,7 @@ const TOURS: Tour[] = [
   },
   {
     activities: [],
-    description: 'The best tour in the world',
+    description: 'The best tour in the world ever ever ever ever ever ever',
     duration: '1 day',
     id: 1,
     name: 'The best tour',
@@ -62,7 +62,7 @@ export const useTourForm = ({
 
   const handleSubmit = form.handleSubmit(async (data) => {
     console.log({ data });
-    setPeopleCount(data.adult + data.children);
+    setPeopleCount(Number(data.adult) + Number(data.children));
     setTours(TOURS);
   });
 

@@ -27,7 +27,7 @@ export const TextField: FC<TextFieldProps> = ({
   } = form;
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className={textFieldStyles.textFieldContainer}>
       <label htmlFor={fieldName} className={textFieldStyles.title}>
         {title}
       </label>
