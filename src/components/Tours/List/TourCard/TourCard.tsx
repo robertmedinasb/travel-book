@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { Tour } from '../types/Tour';
 import TourCardStyles from './styles/TourCard.module.scss';
 import Image from 'next/image';
-import tourImg from '@/assets/images/download.jpeg';
 
 interface TourCardProps extends Tour {
   peopleCount: number;
@@ -12,7 +11,7 @@ export const TourCard: FC<TourCardProps> = ({ peopleCount, ...tour }) => {
   return (
     <div className={TourCardStyles.card}>
       <div className={TourCardStyles.cardImage}>
-        <Image src={tourImg} alt={tour.name} />
+        <Image src={tour.image} alt={tour.name} width={150} height={300} />
       </div>
       <div className={TourCardStyles.info}>
         <span className={TourCardStyles.name}>{tour.name}</span>

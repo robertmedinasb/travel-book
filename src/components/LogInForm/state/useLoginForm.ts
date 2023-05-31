@@ -17,7 +17,16 @@ export const useLoginForm = (): UseLoginFormState => {
   });
 
   const handleSubmit = form.handleSubmit(async (data) => {
-    router.push('/tours');
+    const resp = await fetch('/api/login', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    const response = await resp.json();
+    if (!!response.error) {
+      form.setError('root', { message: response.error.message });
+      return console.error(response.error);
+    } else router.push('/tours');
   });
 
   const firstError = Object.values(form.formState.errors)[0]?.message ?? '';

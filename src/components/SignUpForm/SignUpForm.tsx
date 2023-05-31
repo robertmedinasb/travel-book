@@ -17,7 +17,7 @@ export const SignUpForm: FC<SignUpFormProps> = () => {
     <form className={signUpFormStyles.form} onSubmit={handleSubmit}>
       <TextField<SignupForm>
         form={form}
-        fieldName="name"
+        fieldName="firstName"
         placeholder="First name"
         title="First Name"
         regex={NAME_REGEX}

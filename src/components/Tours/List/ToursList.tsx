@@ -9,9 +9,9 @@ interface ToursList {
 
 export const ToursList: FC<ToursList> = ({ peopleCount, tours }) => {
   return (
-    <div className="flex flex-wrap justify-center p-5 gap-4 w-fit mt-[8vh]">
+    <div className="flex flex-wrap justify-center p-5 gap-4 w-fit mt-[8vh] mx-auto">
       {tours.map((tour) => (
-        <TourCard {...tour} peopleCount={peopleCount} />
+        <TourCard {...tour} peopleCount={peopleCount} key={tour.id} />
       ))}
     </div>
   );

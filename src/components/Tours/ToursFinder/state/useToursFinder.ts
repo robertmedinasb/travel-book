@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import { Tour } from '../../List/types/Tour';
 
 interface UseToursFinderReducer {
@@ -25,6 +25,16 @@ export const useToursFinder = (): UseToursFinderState => {
   const setPeopleCount = (peopleCount: number) => dispatch({ peopleCount });
 
   const setTours = (tours: Tour[]) => dispatch({ tours });
+
+  const fetchTours = async () => {
+    const resp = await fetch('/api/tours');
+    const data = await resp.json();
+    setTours(data.tours);
+  };
+
+  useEffect(() => {
+    fetchTours();
+  }, []);
 
   return {
     ...state,
